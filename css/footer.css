@@ -1,9 +1,19 @@
 /* Здесь будут стили для подвала */
 footer {
-    background-color: #8f877e;        /* Цвет фона */
-    color: #FEEFDD;                   /* Цвет текста */
-    padding: 20px 0;                  /* Внутренние отступы */
-    margin-top: auto;                 /* Отступ сверху */
+    background-color: #201e1f;        /* Цвет фона */
+    color: #feefdd;                   /* Цвет текста */
+    text-align: center;               /* Выравнивание по центру */
+    padding: 20px;                    /* Внутренние отступы */
+    margin-top: 50px;                 /* Отступ сверху */
+    border-radius: 20rem;              /* Закругление углов */
+    margin: 20px;                     /* Отступы */
+    border: 1px solid #a7d1cf;
+}
+
+/* Стили для текста в подвале */
+footer p {
+    margin: 0;                        /* Убираем отступы */
+    font-size: 0.9rem;                /* Размер шрифта */
 }
 
 /* Стили для контейнера в подвале */
@@ -14,12 +24,6 @@ footer {
     text-align: center;               /* Выравнивание по центру */
 }
 
-/* Стили для текста в подвале */
-.footer-text {
-    font-size: 0.9rem;                /* Размер шрифта */
-    opacity: 0.8;                     /* Прозрачность */
-}
-
 /* Стили для ссылок в подвале */
 .footer-links {
     margin-top: 10px;                 /* Отступ сверху */
@@ -27,13 +31,13 @@ footer {
 
 /* Стили для каждой ссылки в подвале */
 .footer-links a {
-    color: #FEEFDD;                   /* Цвет текста */
+    color: #feefdd;                   /* Цвет текста */
     text-decoration: none;            /* Убираем подчеркивание */
     margin: 0 10px;                   /* Отступы по бокам */
-    transition: opacity 0.3s ease;    /* Плавная анимация прозрачности */
+    transition: color 0.3s ease;    /* Плавная анимация прозрачности */
 }
 
 /* Эффект при наведении на ссылки в подвале */
 .footer-links a:hover {
-    opacity: 0.8;                     /* Уменьшаем прозрачность */
+    color: #a7d1cf;                     /* Уменьшаем прозрачность */
 } 
