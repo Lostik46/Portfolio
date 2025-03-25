@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
@@ -10,28 +11,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
-    <title>Портфолио</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo-container">
                 <a href="index.html" class="logo">Феденко Алексей</a>
-                <img class="logo-img" src="img/my_profile.jpg" alt="Fedenko Aleksey">
+                <img src="img/my_profile.jpg" alt="Logo" class="logo-img">
             </div>
             <ul class="nav-links">
-                <li><a href="works.html">Работы</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="works.html">Мои работы</a></li>
                 <li><a href="contacs.html">Контакты</a></li>
             </ul>
             <div class="burger">☰</div>
         </nav>
     </header>
+
     <main>
-        <h1>Это главная страница</h1>
+        <section class="hero">
+            <h1>Добро пожаловать на мой сайт</h1>
+            <p>Я создаю уникальные веб-решения</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Креативный дизайн</h3>
+                <p>Создаю уникальные и современные интерфейсы</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💻</div>
+                <h3>Разработка</h3>
+                <p>Пишу чистый и эффективный код</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Адаптивность</h3>
+                <p>Сайты отлично работают на всех устройствах</p>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Мои навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-progress" style="--progress: 90%">
+                        <span>HTML</span>
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-progress" style="--progress: 85%">
+                        <span>CSS</span>
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-progress" style="--progress: 75%">
+                        <span>JavaScript</span>
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-preview">
+            <h2>Последние проекты</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="img/project1.jpg" alt="Проект 1">
+                    <div class="project-info">
+                        <h3>Название проекта 1</h3>
+                        <p>Краткое описание проекта</p>
+                        <a href="works.html" class="project-link">Подробнее</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/project2.jpg" alt="Проект 2">
+                    <div class="project-info">
+                        <h3>Название проекта 2</h3>
+                        <p>Краткое описание проекта</p>
+                        <a href="works.html" class="project-link">Подробнее</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="img/project3.jpg" alt="Проект 3">
+                    <div class="project-info">
+                        <h3>Название проекта 3</h3>
+                        <p>Краткое описание проекта</p>
+                        <a href="works.html" class="project-link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-preview">
+            <h2>Давайте начнем сотрудничество</h2>
+            <p>Свяжитесь со мной для обсуждения вашего проекта</p>
+            <a href="contacs.html" class="contact-button">Связаться</a>
+        </section>
     </main>
+
     <footer>
-        <p>© 2025 Феденко Алексей. Все права защищены.</p>
+        <p>&copy; 2024 Lostik. Все права защищены.</p>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>
