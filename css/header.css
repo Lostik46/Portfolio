@@ -46,13 +46,13 @@
     pointer-events: none;
 }
 
-@media (hover: none) {
+@media (pointer: coarse) {
     .logo-img {
         display: none !important;
     }
 }
 
-@media (hover: hover) {
+@media (pointer: fine) {
     .logo:hover ~ .logo-img,
     .logo-container:hover .logo-img {
         opacity: 1;
