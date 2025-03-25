@@ -11,8 +11,8 @@ html, body {
     margin: 0;                        /* Убираем отступы */
     padding: 0;                       /* Убираем отступы */
     font-family: 'Roboto', sans-serif; /* Шрифт */
-    background-color: #FEEFDD;        /* Цвет фона */
-    color: #333;                      /* Цвет текста */
+    background-color: #FEEFDD;
+    color: #333;
 }
 
 /* Стили для основного контейнера */
@@ -31,7 +31,7 @@ main {
 /* Стили для заголовков */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;              /* Отступ снизу */
-    color: #333;                      /* Цвет текста */
+    color: #333;
 }
 
 /* Стили для параграфов */

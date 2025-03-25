@@ -51,7 +51,7 @@
     pointer-events: none;             /* Игнорируем события мыши */
 }
 
-/* Отключаем фото на тач-устройствах */
+/* ОтключYем фото на тач-устройствах */
 @media (pointer: coarse) {
     .logo-img {
         display: none !important;     /* Скрываем фото */
