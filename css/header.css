@@ -1,156 +1,176 @@
+/* Стили для навигационной панели */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20rem;
-    background-color: #8f877e;
-    padding: 15px 30px;
-    color: #FEEFDD;
-    position: relative;
-    z-index: 1000;
+    display: flex;                    /* Используем flexbox для расположения элементов */
+    justify-content: space-between;   /* Распределяем элементы по краям */
+    align-items: center;              /* Выравниваем элементы по центру по вертикали */
+    border-radius: 20rem;             /* Скругляем углы навигационной панели */
+    background-color: #8f877e;        /* Задаем цвет фона */
+    padding: 15px 30px;               /* Внутренние отступы */
+    color: #FEEFDD;                   /* Цвет текста */
+    position: relative;               /* Для позиционирования дочерних элементов */
+    z-index: 1000;                    /* Устанавливаем приоритет отображения */
 }
 
+/* Стили для логотипа */
 .logo {
-    color: #FEEFDD;
-    text-decoration: none;
-    transition: all 0.2s ease; 
-    cursor: pointer;
-    text-align: center;
-    transform-origin: center;
-    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    color: #FEEFDD;                   /* Цвет текста логотипа */
+    text-decoration: none;            /* Убираем подчеркивание */
+    transition: all 0.2s ease;        /* Плавная анимация всех свойств */
+    cursor: pointer;                  /* Курсор-указатель при наведении */
+    text-align: center;               /* Выравнивание текста по центру */
+    transform-origin: center;         /* Точка трансформации в центре */
+    font-size: clamp(1.2rem, 4vw, 1.8rem); /* Адаптивный размер шрифта */
 }
 
+/* Эффект при наведении на логотип */
 .logo:hover{
-    transform: scale(1.15); 
+    transform: scale(1.15);           /* Увеличиваем размер при наведении */
 }
 
+/* Контейнер для логотипа */
 .logo-container {
-    position: relative;
-    display: inline-block;
+    position: relative;               /* Для позиционирования фото */
+    display: inline-block;            /* Блочно-строчный элемент */
 }
 
+/* Стили для фотографии логотипа */
 .logo-img {
-    position: absolute;
-    left: 50%;
-    top: 112%;
-    transform: translateX(-50%) scale(0.95);
-    opacity: 0;
-    width: 18vw;
-    height: 18vw;
-    border-radius: 8%;
-    object-fit: cover;
-    border: 3px solid #FEEFDD;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: all 0.3s ease;
-    pointer-events: none;
+    position: absolute;               /* Абсолютное позиционирование */
+    left: 50%;                        /* Отступ слева 50% */
+    top: 112%;                        /* Отступ сверху */
+    transform: translateX(-50%) scale(0.95); /* Центрирование и начальный размер */
+    opacity: 0;                       /* Начальная прозрачность */
+    width: 18vw;                      /* Ширина фото */
+    height: 18vw;                     /* Высота фото */
+    border-radius: 8%;                /* Скругление углов */
+    object-fit: cover;                /* Обрезка фото по размеру */
+    border: 3px solid #FEEFDD;        /* Рамка вокруг фото */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тень */
+    z-index: 1000;                    /* Приоритет отображения */
+    transition: all 0.3s ease;        /* Плавная анимация */
+    pointer-events: none;             /* Игнорируем события мыши */
 }
 
+/* Отключаем фото на тач-устройствах */
 @media (pointer: coarse) {
     .logo-img {
-        display: none !important;
+        display: none !important;     /* Скрываем фото */
     }
 }
 
+/* Показываем фото только на устройствах с мышью */
 @media (pointer: fine) {
-    .logo:hover ~ .logo-img,
+    .logo:hover ~ .logo-img,          /* Показываем фото при наведении на логотип */
     .logo-container:hover .logo-img {
-        opacity: 1;
-        transform: translateX(-50%) scale(1);
+        opacity: 1;                   /* Полная видимость */
+        transform: translateX(-50%) scale(1); /* Центрирование и нормальный размер */
     }
 }
 
+/* Стили для навигационных ссылок */
 .nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex;                    /* Flexbox для ссылок */
+    gap: 30px;                        /* Отступы между ссылками */
+    list-style: none;                 /* Убираем маркеры списка */
+    margin: 0;                        /* Внешние отступы */
+    padding: 0;                       /* Внутренние отступы */
 }
 
+/* Стили для каждой ссылки */
 .nav-links a {
-    display: inline-block;
-    color: #FEEFDD;
-    position: relative;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 1.3rem;
-    transition: all 0.2s ease; 
-    text-align: center;
-    transform-origin: center;
+    display: inline-block;            /* Блочно-строчный элемент */
+    color: #FEEFDD;                   /* Цвет текста */
+    position: relative;               /* Для подчеркивания */
+    cursor: pointer;                  /* Курсор-указатель */
+    text-decoration: none;            /* Убираем подчеркивание */
+    font-size: 1.3rem;                /* Размер шрифта */
+    transition: all 0.2s ease;        /* Плавная анимация */
+    text-align: center;               /* Выравнивание по центру */
+    transform-origin: center;         /* Точка трансформации */
 }
 
+/* Эффект при наведении на ссылку */
 .nav-links a:hover {
-    color: #FEEFDD;
-    transform: scale(1.3); 
+    color: #FEEFDD;                   /* Цвет текста */
+    transform: scale(1.3);            /* Увеличение размера */
 }
 
+/* Подчеркивание ссылки */
 .nav-links a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #50B2C0;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+    content: '';                      /* Псевдоэлемент */
+    position: absolute;               /* Абсолютное позиционирование */
+    left: 0;                          /* Отступ слева */
+    bottom: 0;                        /* Отступ снизу */
+    width: 100%;                      /* Ширина линии */
+    height: 2px;                      /* Высота линии */
+    background: #50B2C0;              /* Цвет линии */
+    transform: scaleX(0);             /* Начальная ширина 0 */
+    transition: transform 0.3s ease;  /* Плавная анимация */
 }
 
+/* Показываем подчеркивание при наведении */
 .nav-links a:hover::after {
-    transform: scaleX(1);
+    transform: scaleX(1);             /* Полная ширина линии */
 }
 
+/* Стили для кнопки бургер-меню */
 .burger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
+    display: none;                    /* По умолчанию скрыта */
+    font-size: 24px;                  /* Размер иконки */
+    cursor: pointer;                  /* Курсор-указатель */
 }
 
+/* Стили для мобильной версии */
 @media (max-width: 768px) {
+    /* Стили для навигационного меню */
     .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #8f877e;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        gap: 15px;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        pointer-events: none;
-        margin-top: 10px;
-        border-radius: 20rem;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        backdrop-filter: blur(5px);
+        position: absolute;           /* Абсолютное позиционирование */
+        top: 100%;                    /* Отступ сверху */
+        left: 0;                      /* Отступ слева */
+        width: 100%;                  /* Полная ширина */
+        background-color: #8f877e;    /* Цвет фона */
+        flex-direction: column;       /* Вертикальное расположение */
+        align-items: center;          /* Выравнивание по центру */
+        padding: 20px 0;              /* Внутренние отступы */
+        gap: 15px;                    /* Отступы между элементами */
+        opacity: 0;                   /* Начальная прозрачность */
+        visibility: hidden;           /* Скрываем меню */
+        transform: translateY(-20px); /* Сдвигаем вверх */
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
+        pointer-events: none;         /* Игнорируем события мыши */
+        margin-top: 10px;             /* Отступ сверху */
+        border-radius: 20rem;         /* Скругление углов */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
+        backdrop-filter: blur(5px);   /* Размытие фона */
     }
 
+    /* Показываем кнопку бургер-меню */
     .burger {
-        display: block;
+        display: block;               /* Отображаем кнопку */
     }
 
+    /* Активное состояние меню */
     .nav-links.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
+        opacity: 1;                   /* Полная видимость */
+        visibility: visible;          /* Показываем меню */
+        transform: translateY(0);     /* Возвращаем на место */
+        pointer-events: auto;         /* Разрешаем события мыши */
     }
 
+    /* Стили для пунктов меню */
     .nav-links li {
-        opacity: 0;
-        transform: translateY(15px);
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;                   /* Начальная прозрачность */
+        transform: translateY(15px);  /* Сдвигаем вниз */
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Плавная анимация */
     }
 
+    /* Активное состояние пунктов меню */
     .nav-links.active li {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;                   /* Полная видимость */
+        transform: translateY(0);     /* Возвращаем на место */
     }
 
-    .nav-links li:nth-child(1) { transition-delay: 0.2s; }
-    .nav-links li:nth-child(2) { transition-delay: 0.3s; }
+    /* Задержка анимации для пунктов меню */
+    .nav-links li:nth-child(1) { transition-delay: 0.2s; } /* Первый пункт */
+    .nav-links li:nth-child(2) { transition-delay: 0.3s; } /* Второй пункт */
 } 

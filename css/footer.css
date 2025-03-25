@@ -1,7 +1,39 @@
 /* Здесь будут стили для подвала */
 footer {
-    background-color: #8f877e;
-    color: #FEEFDD;
-    padding: 20px;
-    margin-top: 40px;
+    background-color: #8f877e;        /* Цвет фона */
+    color: #FEEFDD;                   /* Цвет текста */
+    padding: 20px 0;                  /* Внутренние отступы */
+    margin-top: auto;                 /* Отступ сверху */
+}
+
+/* Стили для контейнера в подвале */
+.footer-container {
+    max-width: 1200px;                /* Максимальная ширина */
+    margin: 0 auto;                   /* Центрирование */
+    padding: 0 20px;                  /* Внутренние отступы */
+    text-align: center;               /* Выравнивание по центру */
+}
+
+/* Стили для текста в подвале */
+.footer-text {
+    font-size: 0.9rem;                /* Размер шрифта */
+    opacity: 0.8;                     /* Прозрачность */
+}
+
+/* Стили для ссылок в подвале */
+.footer-links {
+    margin-top: 10px;                 /* Отступ сверху */
+}
+
+/* Стили для каждой ссылки в подвале */
+.footer-links a {
+    color: #FEEFDD;                   /* Цвет текста */
+    text-decoration: none;            /* Убираем подчеркивание */
+    margin: 0 10px;                   /* Отступы по бокам */
+    transition: opacity 0.3s ease;    /* Плавная анимация прозрачности */
+}
+
+/* Эффект при наведении на ссылки в подвале */
+.footer-links a:hover {
+    opacity: 0.8;                     /* Уменьшаем прозрачность */
 } 
