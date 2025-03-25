@@ -3,35 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои работы</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
-    <title>Мои работы</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo-container">
-                <a href="index.html" class="logo">Феденко Алексей</a>
-                <img class="logo-img" src="img/my_profile.jpg" alt="Fedenko Aleksey">
+            <a href="index.html" class="logo">Lostik</a>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="works.html">Работы</a>
+                <a href="contacs.html">Контакты</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="works.html">Работы</a></li>
-                <li><a href="contacs.html">Контакты</a></li>
-            </ul>
             <div class="burger">☰</div>
         </nav>
     </header>
+
     <main>
-        <h1>Тут будут располагаться мои работы</h1>
+        <section class="works">
+            <h1>Мои работы</h1>
+            <div class="works-grid">
+                <div class="work-card">
+                    <img src="img/work1.jpg" alt="Проект 1">
+                    <div class="work-info">
+                        <h3>Название проекта 1</h3>
+                        <p>Описание проекта и использованные технологии</p>
+                        <a href="#" class="work-link">Подробнее</a>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="img/work2.jpg" alt="Проект 2">
+                    <div class="work-info">
+                        <h3>Название проекта 2</h3>
+                        <p>Описание проекта и использованные технологии</p>
+                        <a href="#" class="work-link">Подробнее</a>
+                    </div>
+                </div>
+                <div class="work-card">
+                    <img src="img/work3.jpg" alt="Проект 3">
+                    <div class="work-info">
+                        <h3>Название проекта 3</h3>
+                        <p>Описание проекта и использованные технологии</p>
+                        <a href="#" class="work-link">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-        <p>© 2025 Феденко Алексей. Все права защищены.</p>
+        <p>&copy; 2024 Lostik. Все права защищены.</p>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

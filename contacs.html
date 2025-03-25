@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои контакты</title>
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/main.css">
@@ -10,28 +11,61 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700&display=swap" rel="stylesheet">
-    <title>Мои контакты</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo-container">
-                <a href="index.html" class="logo">Феденко Алексей</a>
-                <img class="logo-img" src="img/my_profile.jpg" alt="Fedenko Aleksey">
+            <a href="index.html" class="logo">Lostik</a>
+            <div class="nav-links">
+                <a href="index.html">Главная</a>
+                <a href="works.html">Работы</a>
+                <a href="contacs.html">Контакты</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="works.html">Работы</a></li>
-                <li><a href="contacs.html">Контакты</a></li>
-            </ul>
             <div class="burger">☰</div>
         </nav>
     </header>
+
     <main>
-        <h1>Тут будут располагаться мои контакты</h1>
+        <section class="contacts">
+            <h1>Мои контакты</h1>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3>Email</h3>
+                    <p>your.email@example.com</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Телефон</h3>
+                    <p>+7 (XXX) XXX-XX-XX</p>
+                </div>
+                <div class="contact-card">
+                    <h3>Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">VK</a>
+                        <a href="#" class="social-link">Telegram</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form">
+                <h2>Связаться со мной</h2>
+                <div class="form-group">
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Ваш email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Ваше сообщение" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p>© 2025 Феденко Алексей. Все права защищены.</p>
+        <p>&copy; 2024 Lostik. Все права защищены.</p>
     </footer>
+
     <script src="js/main.js"></script>
 </body>
 </html>

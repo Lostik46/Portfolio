@@ -4,14 +4,13 @@
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 40px);
-    max-width: 1200px;
+    width: min(calc(100% - clamp(20px, 5vw, 40px)), 1200px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 20rem;
     background-color: rgba(32, 30, 31, 0.8);
-    padding: 15px 30px;
+    padding: clamp(10px, 2vw, 15px) clamp(15px, 3vw, 30px);
     color: #feefdd;
     z-index: 1000;
     border: 1px solid rgba(167, 209, 207, 0.3);
@@ -135,30 +134,31 @@
 @media (max-width: 768px) {
     .navbar {
         top: 10px;
-        width: calc(100% - 20px);
-        padding: 10px 20px;
+        width: min(calc(100% - clamp(15px, 4vw, 20px)), 1200px);
+        padding: clamp(8px, 2vw, 10px) clamp(12px, 2.5vw, 15px);
         background-color: rgba(32, 30, 31, 0.9);
+        border-radius: 15rem;
     }
 
     /* Стили для навигационного меню */
     .nav-links {
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100% - 20px);
+        width: min(calc(100% - clamp(15px, 4vw, 20px)), 1200px);
         max-width: 1200px;
         background-color: rgba(32, 30, 31, 0.9);
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
-        gap: 15px;
+        padding: clamp(12px, 2vw, 15px) 0;
+        gap: 10px;
         opacity: 0;
         visibility: hidden;
         transform: translateX(-50%) translateY(-20px);
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         pointer-events: none;
-        border-radius: 20rem;
+        border-radius: 15rem;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
@@ -194,4 +194,15 @@
     /* Задержка анимации для пунктов меню */
     .nav-links li:nth-child(1) { transition-delay: 0.2s; }
     .nav-links li:nth-child(2) { transition-delay: 0.3s; }
+
+    /* Стили для каждой ссылки в мобильной версии */
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 5px 15px;
+    }
+
+    /* Эффект при наведении на ссылку в мобильной версии */
+    .nav-links a:hover {
+        transform: scale(1.2);
+    }
 } 
