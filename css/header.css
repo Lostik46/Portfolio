@@ -47,9 +47,8 @@
 }
 
 @media (hover: none) {
-    .logo:hover ~ .logo-img,
-    .logo-container:hover .logo-img {
-        display: none;
+    .logo-img {
+        display: none !important;
     }
 }
 
