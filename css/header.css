@@ -17,7 +17,7 @@
     cursor: pointer;
     text-align: center;
     transform-origin: center;
-    font-size: 1.8rem;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
 }
 
 .logo:hover{
@@ -46,10 +46,19 @@
     pointer-events: none;
 }
 
-.logo:hover ~ .logo-img,
-.logo-container:hover .logo-img {
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
+@media (hover: none) {
+    .logo:hover ~ .logo-img,
+    .logo-container:hover .logo-img {
+        display: none;
+    }
+}
+
+@media (hover: hover) {
+    .logo:hover ~ .logo-img,
+    .logo-container:hover .logo-img {
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
 }
 
 .nav-links {
